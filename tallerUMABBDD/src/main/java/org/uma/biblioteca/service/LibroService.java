@@ -14,4 +14,8 @@ public interface LibroService {
     public List<Libro> findByExample(Libro libro);
 
     public Libro findById(Integer id);
+
+    public Libro nuevoLibro(Libro libro);
+
+    public void deleteById(Integer id);
 }

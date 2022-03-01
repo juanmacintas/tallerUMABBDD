@@ -28,7 +28,7 @@ public class EditorialServiceImpl implements EditorialService {
 	@Override
 	public Editorial findById(Integer id) {
 		log.debug("Se obtiene la editorial con id:" + id);
-		return editorialRepository.getOne(id);
+		return editorialRepository.getById(id);
 	}
 
 

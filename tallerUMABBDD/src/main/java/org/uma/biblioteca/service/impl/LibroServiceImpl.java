@@ -44,7 +44,21 @@ public class LibroServiceImpl implements LibroService {
 	@Override
 	public Libro findById(Integer id) {
 		log.debug("Se busca el libro del id" + id);
-		return libroRepository.getOne(id);
+		return libroRepository.getById(id);
+	}
+
+
+	@Override
+	public Libro nuevoLibro(Libro libro) {
+		log.debug("Se inserta el libro:" + libro);
+		return  libroRepository.save(libro);
+	}
+
+
+	@Override
+	public void deleteById(Integer id) {
+		log.debug("Se elimina el libro con id:" + id);
+		libroRepository.deleteById(id);
 	}
 
 }

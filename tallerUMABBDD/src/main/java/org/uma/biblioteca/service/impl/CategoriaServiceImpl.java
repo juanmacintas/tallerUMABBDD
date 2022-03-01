@@ -32,7 +32,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 	@Cacheable(value = "categoria", key = "#id")
 	public Categoria findById(Integer id) {
 		log.debug("Se obtiene la categoria con id:" + id);
-		return categoriaRepository.getOne(id);
+		return categoriaRepository.getById(id);
 	}
 
 

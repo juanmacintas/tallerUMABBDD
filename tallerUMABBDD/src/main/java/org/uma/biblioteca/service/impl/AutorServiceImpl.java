@@ -29,7 +29,7 @@ public class AutorServiceImpl implements AutorService {
 	@Override
 	public Autor findById(Integer id) {
 		log.debug("Se obtiene el autor con id:" + id);
-		return autorRepository.getOne(id);
+		return autorRepository.getById(id);
 	}
 
 
