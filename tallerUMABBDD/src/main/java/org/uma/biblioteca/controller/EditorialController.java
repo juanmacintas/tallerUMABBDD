@@ -37,7 +37,7 @@ public class EditorialController {
     }
 
 
-    @PostMapping("/inserEditorial")
+    @PostMapping("/insertEditorial")
     public void insert(@RequestBody EditorialDto editorialDto) {
     	log.debug("Inserta una nueva Editorial:"+ editorialDto);
     	Editorial editorial = mapper.map(editorialDto, Editorial.class);

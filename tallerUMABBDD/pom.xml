@@ -42,11 +42,10 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-    		<groupId>com.github.database-rider</groupId>
-    		<artifactId>rider-junit5</artifactId>
-    		<version>1.10.0</version>
-    		<scope>test</scope>
-		</dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
