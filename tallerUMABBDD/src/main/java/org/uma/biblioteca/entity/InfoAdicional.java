@@ -3,6 +3,7 @@ package org.uma.biblioteca.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -46,7 +47,7 @@ public class InfoAdicional {
      * Objeto libro.
      */
     @OneToOne
-    @JoinColumn(name = "libro", referencedColumnName = "id")
+    @MapsId
     private Libro libro;
 
 }

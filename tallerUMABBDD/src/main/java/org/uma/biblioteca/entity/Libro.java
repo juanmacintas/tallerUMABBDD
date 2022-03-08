@@ -72,7 +72,8 @@ public class Libro {
      */
     private Boolean favorite;
 
-    @OneToOne(mappedBy="libro")
+
+    @OneToOne(mappedBy="libro",cascade = CascadeType.ALL)
     private InfoAdicional informacion;
 
 }
