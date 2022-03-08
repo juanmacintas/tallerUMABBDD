@@ -2,6 +2,8 @@ package org.uma.biblioteca.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,5 +33,6 @@ public class CategoriaDto {
     /**
      * Libros de la categoría
      */
+    @JsonIgnore
     private List<LibroDto> libros;
 }

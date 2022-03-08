@@ -2,6 +2,8 @@ package org.uma.biblioteca.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,5 +32,6 @@ public class AutorDto {
     /**
      * Libros.
      */
+    @JsonIgnore
     List<LibroDto> libros;
 }
