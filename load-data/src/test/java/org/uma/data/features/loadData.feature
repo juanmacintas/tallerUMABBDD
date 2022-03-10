@@ -49,7 +49,10 @@ Given path '/insertEditorial'
 And request {"id":11,"nombre":"Planeta DeAgostini Cómics"}
 When method post
 Then status 200
-
+Given path '/insertEditorial'
+And request {"id":12,"nombre":"DESTINO"}
+When method post
+Then status 200
 
 Scenario: load Categorias into database
 
@@ -257,5 +260,50 @@ Then status 200
 
 Given path '/insertLibro'
 And request {"id":"17",  "titulo":"Trilogía de la Fundación",  "descripcion":"Descripción de Trilogía de la Fundación",  "categoria": {"id":"1","nombre":"Ciencia Ficción"},  "editorial": {"id":"3", "nombre":"DEBOLS!LLO"}, "autores" : [{"id":"12"}], "favorite":false,  "informacion": {"id": 17, "isbn": "849908320X", "fechaPublicacion": 2010, "idioma": "Español", "libro": {"id": 17} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"18",  "titulo":"Los muertos vivientes #1: Días pasados",  "descripcion":"Descripción de Los muertos vivientes #1: Días pasados",  "categoria": {"id":"6","nombre":"Cómic"},  "editorial": {"id":"1", "nombre":"Planeta DeAgostini Cómics"}, "autores" : [{"id":"13"}], "favorite":false,  "informacion": {"id": 18, "isbn": "846840277X", "fechaPublicacion": 2010, "idioma": "Español", "libro": {"id": 18} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"19",  "titulo":"Los muertos vivientes #2: Días pasados",  "descripcion":"Descripción de Los muertos vivientes #2: Días pasados",  "categoria": {"id":"6","nombre":"Cómic"},  "editorial": {"id":"1", "nombre":"Planeta DeAgostini Cómics"}, "autores" : [{"id":"13"}], "favorite":false,  "informacion": {"id": 19, "isbn": "8468402788", "fechaPublicacion": 2010, "idioma": "Español", "libro": {"id": 19} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"20",  "titulo":"Los muertos vivientes #3: Días pasados",  "descripcion":"Descripción de Los muertos vivientes #3: Días pasados",  "categoria": {"id":"6","nombre":"Cómic"},  "editorial": {"id":"1", "nombre":"Planeta DeAgostini Cómics"}, "autores" : [{"id":"13"}], "favorite":false,  "informacion": {"id": 20, "isbn": "8468477680", "fechaPublicacion": 2010, "idioma": "Español", "libro": {"id": 20} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"21",  "titulo":"El señor de los anillos: La Comunidad del anillo",  "descripcion":"Descripción de El señor de los anillos: La Comunidad del anillo",  "categoria": {"id":"11","nombre":"Fantasía"},  "editorial": {"id":"5", "nombre":"Minotauro"}, "autores" : [{"id":"14"}], "favorite":false,  "informacion": {"id": 21, "isbn": "8445000667", "fechaPublicacion": 2012, "idioma": "Español", "libro": {"id": 21} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"22",  "titulo":"El señor de los anillos: La Dos Torres",  "descripcion":"Descripción de El señor de los anillos: La Dos Torres",  "categoria": {"id":"11","nombre":"Fantasía"},  "editorial": {"id":"5", "nombre":"Minotauro"}, "autores" : [{"id":"14"}], "favorite":false,  "informacion": {"id": 22, "isbn": "8445000675", "fechaPublicacion": 2012, "idioma": "Español", "libro": {"id": 22} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"23",  "titulo":"El señor de los anillos: El Retorno del Rey",  "descripcion":"Descripción de El señor de los anillos: El Retorno del Rey",  "categoria": {"id":"11","nombre":"Fantasía"},  "editorial": {"id":"5", "nombre":"Minotauro"}, "autores" : [{"id":"14"}], "favorite":false,  "informacion": {"id": 23, "isbn": "8445000683", "fechaPublicacion": 2012, "idioma": "Español", "libro": {"id": 23} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"24",  "titulo":"El Hobbit",  "descripcion":"Descripción de El Hobbit",  "categoria": {"id":"11","nombre":"Fantasía"},  "editorial": {"id":"5", "nombre":"Minotauro"}, "autores" : [{"id":"14"}], "favorite":false,  "informacion": {"id": 24, "isbn": "8467909226", "fechaPublicacion": 2013, "idioma": "Español", "libro": {"id": 24} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"25",  "titulo":"Orgullo y Prejuicio",  "descripcion":"Descripción de Orgullo y Prejuicio",  "categoria": {"id":"4","nombre":"Romantica"},  "editorial": {"id":"3", "nombre":"DEBOLS!LLO"}, "autores" : [{"id":"16"}], "favorite":false,  "informacion": {"id": 25, "isbn": "6079723956", "fechaPublicacion": 2018, "idioma": "Español", "libro": {"id": 25} }}}
+When method post
+Then status 200
+
+Given path '/insertLibro'
+And request {"id":"26",  "titulo":"Los hombres que no amaban a las mujeres",  "descripcion":"Descripción de Los hombres que no amaban a las mujeres",  "categoria": {"id":"2","nombre":"B DE BOOKS"},  "editorial": {"id":"12", "nombre":"DESTINO"}, "autores" : [{"id":"15"}], "favorite":false,  "informacion": {"id": 26, "isbn": "9788423356270", "fechaPublicacion": 2019, "idioma": "Español", "libro": {"id": 26} }}}
 When method post
 Then status 200
