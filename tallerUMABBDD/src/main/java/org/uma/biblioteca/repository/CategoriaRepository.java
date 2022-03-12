@@ -1,13 +1,10 @@
 package org.uma.biblioteca.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.uma.biblioteca.entity.Categoria;
 
 
-
-@Repository
-public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
+public interface CategoriaRepository extends MongoRepository<Categoria, Integer> {
 
 
 }

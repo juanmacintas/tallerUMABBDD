@@ -1,6 +1,7 @@
 package org.uma.biblioteca.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,9 +28,9 @@ public class AutorServiceImpl implements AutorService {
 
 
 	@Override
-	public Autor findById(Integer id) {
+	public Optional<Autor> findById(Integer id) {
 		log.debug("Se obtiene el autor con id:" + id);
-		return autorRepository.getById(id);
+		return autorRepository.findById(id);
 	}
 
 

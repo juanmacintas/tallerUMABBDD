@@ -1,6 +1,7 @@
 package org.uma.biblioteca.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,9 +27,9 @@ public class EditorialServiceImpl implements EditorialService {
 
 
 	@Override
-	public Editorial findById(Integer id) {
+	public Optional<Editorial> findById(Integer id) {
 		log.debug("Se obtiene la editorial con id:" + id);
-		return editorialRepository.getById(id);
+		return editorialRepository.findById(id);
 	}
 
 

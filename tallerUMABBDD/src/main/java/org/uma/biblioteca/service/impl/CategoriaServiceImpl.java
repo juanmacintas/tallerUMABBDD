@@ -1,8 +1,7 @@
 package org.uma.biblioteca.service.impl;
 
 import java.util.List;
-
-
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -30,9 +29,9 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 	@Override
 	@Cacheable(value = "categoria", key = "#id")
-	public Categoria findById(Integer id) {
+	public Optional<Categoria> findById(Integer id) {
 		log.debug("Se obtiene la categoria con id:" + id);
-		return categoriaRepository.getById(id);
+		return categoriaRepository.findById(id);
 	}
 
 

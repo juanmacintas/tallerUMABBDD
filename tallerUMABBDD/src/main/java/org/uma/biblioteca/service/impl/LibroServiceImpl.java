@@ -1,6 +1,7 @@
 package org.uma.biblioteca.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -42,9 +43,9 @@ public class LibroServiceImpl implements LibroService {
 
 
 	@Override
-	public Libro findById(Integer id) {
+	public Optional<Libro> findById(Integer id) {
 		log.debug("Se busca el libro del id" + id);
-		return libroRepository.getById(id);
+		return libroRepository.findById(id);
 	}
 
 
