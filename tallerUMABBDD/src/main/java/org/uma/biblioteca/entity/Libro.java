@@ -2,15 +2,7 @@ package org.uma.biblioteca.entity;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +13,7 @@ import lombok.NoArgsConstructor;
  * @author Juan Manuel Cintas
  *
  */
-@Entity
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -32,7 +24,7 @@ public class Libro {
      * Id.
      */
     @Id
-    private Integer id;
+    private String id;
 
     /**
      * Titulo del libro.
@@ -47,24 +39,16 @@ public class Libro {
     /**
      * Categoria ID.
      */
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Categoria categoria;
 
     /**
      * Autores.
      */
-    @ManyToMany
-    @JoinTable(name = "autor_libro",
-    		   joinColumns = @JoinColumn(name = "libro_id"),
-    		   inverseJoinColumns = @JoinColumn(name = "autor_id")
-    		  )
     private List<Autor> autores;
 
     /**
      * Editorial.
      */
-    @ManyToOne
-    @JoinColumn(name = "editorial")
     private Editorial editorial;
 
     /**
@@ -72,8 +56,6 @@ public class Libro {
      */
     private Boolean favorite;
 
-
-    @OneToOne(mappedBy="libro",cascade = CascadeType.ALL)
     private InfoAdicional informacion;
 
 }

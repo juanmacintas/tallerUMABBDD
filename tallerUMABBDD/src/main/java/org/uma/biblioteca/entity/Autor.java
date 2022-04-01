@@ -2,9 +2,7 @@ package org.uma.biblioteca.entity;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +13,7 @@ import lombok.NoArgsConstructor;
  * @author Juan Manuel Cintas
  *
  */
-@Entity
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -26,7 +24,7 @@ public class Autor {
      * Id.
      */
     @Id
-    private int id;
+    private String id;
 
     /**
      * Nombre del autor.
@@ -36,6 +34,5 @@ public class Autor {
     /**
      * Libros.
      */
-    @ManyToMany(mappedBy = "autores")
     List<Libro> libros;
 }

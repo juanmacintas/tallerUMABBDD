@@ -29,7 +29,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 	@Override
 	@Cacheable(value = "categoria", key = "#id")
-	public Optional<Categoria> findById(Integer id) {
+	public Optional<Categoria> findById(String id) {
 		log.debug("Se obtiene la categoria con id:" + id);
 		return categoriaRepository.findById(id);
 	}
@@ -44,7 +44,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 
 	@Override
-	public void deleteById(Integer id) {
+	public void deleteById(String id) {
 		log.debug("Se elimina la categoria con id:" + id);
 		categoriaRepository.deleteById(id);
 

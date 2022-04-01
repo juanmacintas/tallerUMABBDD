@@ -1,10 +1,6 @@
 package org.uma.biblioteca.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
-import javax.persistence.OneToOne;
+import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +11,7 @@ import lombok.NoArgsConstructor;
  * @author Juan Manuel Cintas
  *
  */
-@Entity
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -26,7 +22,7 @@ public class InfoAdicional {
      * Id.
      */
     @Id
-    private int id;
+    private String id;
 
     /**
      * ISBN del libro.
@@ -46,8 +42,6 @@ public class InfoAdicional {
     /**
      * Objeto libro.
      */
-    @OneToOne
-    @MapsId
     private Libro libro;
 
 }

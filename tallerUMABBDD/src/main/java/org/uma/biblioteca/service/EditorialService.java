@@ -10,9 +10,9 @@ public interface EditorialService {
 
     public List<Editorial> findAll();
 
-    public Optional<Editorial> findById(Integer id);
+    public Optional<Editorial> findById(String id);
 
-    public void deleteById(Integer id);
+    public void deleteById(String id);
 
     public Editorial nuevaEditorial(Editorial editorial);
 }

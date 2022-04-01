@@ -48,7 +48,7 @@ public class CategoriaController {
     public void delete(@RequestBody CategoriaDto categoriaDto) {
     	log.debug("Elimina la categoria con id:"+ categoriaDto.getId());
 
-    	categoriaService.deleteById(categoriaDto.getId());
+    	categoriaService.deleteById(String.valueOf(categoriaDto.getId()));
     }
 
 }

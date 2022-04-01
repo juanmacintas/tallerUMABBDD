@@ -1,8 +1,6 @@
 package org.uma.biblioteca.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +11,7 @@ import lombok.NoArgsConstructor;
  * @author Juan Manuel Cintas
  *
  */
-@Entity
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -24,13 +22,12 @@ public class Editorial {
      * Id.
      */
     @Id
-    private int id;
+    private String id;
 
     /**
      * Nombre de la editorial.
      */
-    @Column(name = "nombre", nullable = false, length = 150)
-    private String nombre;
+     private String nombre;
 
 
 }

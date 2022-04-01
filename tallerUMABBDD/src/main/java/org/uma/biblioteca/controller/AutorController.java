@@ -48,7 +48,7 @@ public class AutorController {
     public void delete(@RequestBody AutorDto autorDto) {
     	log.debug("Elimina el autor con id:"+ autorDto.getId());
 
-    	autorService.deleteById(autorDto.getId());
+    	autorService.deleteById(String.valueOf(autorDto.getId()));
     }
 
 }

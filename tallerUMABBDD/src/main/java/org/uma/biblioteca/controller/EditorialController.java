@@ -49,6 +49,6 @@ public class EditorialController {
     public void delete(@RequestBody EditorialDto editorialDto) {
     	log.debug("Elimina la editorial con id:"+ editorialDto.getId());
 
-    	editorialService.deleteById(editorialDto.getId());
+    	editorialService.deleteById(String.valueOf(editorialDto.getId()));
     }
 }

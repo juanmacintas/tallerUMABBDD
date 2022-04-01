@@ -14,9 +14,9 @@ public interface LibroService {
 
     public List<Libro> findByExample(Libro libro);
 
-    public Optional<Libro> findById(Integer id);
+    public Optional<Libro> findById(String id);
 
     public Libro nuevoLibro(Libro libro);
 
-    public void deleteById(Integer id);
+    public void deleteById(String id);
 }

@@ -48,7 +48,7 @@ public class LibroController {
     public void delete(@RequestBody LibroDto libroDto) {
     	log.debug("Elimina el libro con id:"+ libroDto.getId());
 
-    	libroService.deleteById(libroDto.getId());
+    	libroService.deleteById(String.valueOf(libroDto.getId()));
     }
 
 }

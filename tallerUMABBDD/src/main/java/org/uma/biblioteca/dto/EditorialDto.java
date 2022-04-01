@@ -18,7 +18,7 @@ public class EditorialDto {
     /**
      * Id.
      */
-    private int id;
+    private String id;
 
     /**
      * Nombre de la editorial.

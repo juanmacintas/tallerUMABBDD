@@ -2,9 +2,7 @@ package org.uma.biblioteca.entity;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +13,7 @@ import lombok.NoArgsConstructor;
  * @author Juan Manuel Cintas
  *
  */
-@Entity
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -26,7 +24,7 @@ public class Categoria {
      * Id.
      */
     @Id
-    private int id;
+    private String id;
 
     /**
      * Nombre de la categoria.
@@ -37,6 +35,5 @@ public class Categoria {
     /**
      * Libros de la categoría
      */
-    @OneToMany(mappedBy="categoria")
     private List<Libro> libros;
 }

@@ -28,14 +28,14 @@ public class AutorServiceImpl implements AutorService {
 
 
 	@Override
-	public Optional<Autor> findById(Integer id) {
+	public Optional<Autor> findById(String id) {
 		log.debug("Se obtiene el autor con id:" + id);
 		return autorRepository.findById(id);
 	}
 
 
 	@Override
-	public void deleteById(Integer id) {
+	public void deleteById(String id) {
 		log.debug("Se elimina el autor con id:" + id);
 		 autorRepository.deleteById(id);
 

@@ -27,14 +27,14 @@ public class EditorialServiceImpl implements EditorialService {
 
 
 	@Override
-	public Optional<Editorial> findById(Integer id) {
+	public Optional<Editorial> findById(String id) {
 		log.debug("Se obtiene la editorial con id:" + id);
 		return editorialRepository.findById(id);
 	}
 
 
 	@Override
-	public void deleteById(Integer id) {
+	public void deleteById(String id) {
 		log.debug("Se elimina la editorial con id:" + id);
 		editorialRepository.deleteById(id);
 

@@ -11,9 +11,9 @@ public interface CategoriaService {
 
     public List<Categoria> findAll();
 
-    public Optional<Categoria> findById(Integer id);
+    public Optional<Categoria> findById(String id);
 
-    public void deleteById(Integer id);
+    public void deleteById(String id);
 
     public Categoria nuevaCategoria(Categoria categoria);
 }

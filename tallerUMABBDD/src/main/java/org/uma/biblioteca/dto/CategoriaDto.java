@@ -22,7 +22,7 @@ public class CategoriaDto {
     /**
      * Id.
      */
-    private int id;
+    private String id;
 
     /**
      * Nombre de la categoria.

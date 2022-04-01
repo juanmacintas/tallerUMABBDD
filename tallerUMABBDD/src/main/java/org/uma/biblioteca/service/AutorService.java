@@ -9,9 +9,9 @@ public interface AutorService {
 
     public List<Autor> findAll();
 
-    public Optional<Autor> findById(Integer id);
+    public Optional<Autor> findById(String id);
 
-    public void deleteById(Integer id);
+    public void deleteById(String id);
 
     public Autor nuevoAutor(Autor autor);
 }

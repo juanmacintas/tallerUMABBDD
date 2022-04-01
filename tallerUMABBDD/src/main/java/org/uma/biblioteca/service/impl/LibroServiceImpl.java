@@ -43,7 +43,7 @@ public class LibroServiceImpl implements LibroService {
 
 
 	@Override
-	public Optional<Libro> findById(Integer id) {
+	public Optional<Libro> findById(String id) {
 		log.debug("Se busca el libro del id" + id);
 		return libroRepository.findById(id);
 	}
@@ -57,7 +57,7 @@ public class LibroServiceImpl implements LibroService {
 
 
 	@Override
-	public void deleteById(Integer id) {
+	public void deleteById(String id) {
 		log.debug("Se elimina el libro con id:" + id);
 		libroRepository.deleteById(id);
 	}

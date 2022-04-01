@@ -22,7 +22,7 @@ public class AutorDto {
     /**
      * Id.
      */
-    private int id;
+    private String id;
 
     /**
      * Nombre del autor.
