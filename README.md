@@ -24,4 +24,6 @@ Es posible encontrar más información sobre el modelo y las relaciones en [Taller
 Esto creará el modelo de datos en la base de datos PostgreSQL por la configuración de JPA del fichero application.properties
 >spring.jpa.hibernate.ddl-auto=create-drop
 
+3. Realizar una carga de los datos de aplicación
+
 
