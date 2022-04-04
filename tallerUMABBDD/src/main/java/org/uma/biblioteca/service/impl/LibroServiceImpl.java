@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 import org.uma.biblioteca.entity.Libro;
@@ -28,6 +29,7 @@ public class LibroServiceImpl implements LibroService {
 
 
 	@Override
+	@Cacheable(cacheNames = "librosCache")
 	public List<Libro> findAll() {
 		log.debug("Se obtienen todos los libros");
 		return libroRepository.findAll();
