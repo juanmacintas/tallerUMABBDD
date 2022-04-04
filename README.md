@@ -24,6 +24,28 @@ Es posible encontrar más información sobre el modelo y las relaciones en [Taller
 Esto creará el modelo de datos en la base de datos PostgreSQL por la configuración de JPA del fichero application.properties
 >spring.jpa.hibernate.ddl-auto=create-drop
 
-3. Realizar una carga de los datos de aplicación
+3. Ejecutar la aplicación load-data.
+
+> mvn clean test
+
+Esto realizará la inserción de registros de prueba haciendo uso de [Karate](https://github.com/karatelabs/karate)
+
+4. Verificar los datos existentes haciendo uso de los distintos endpoints de los controladores rest
+
+    1. /getAllAutores: Obtener los autores
+
+    > http://localhost:8080/getAllAutores
+    
+    2. /getAllCategorias: Obtener las categorías
+
+    > http://localhost:8080/getAllCategorias
+    
+    3. /getAllEditoriales: Obtener las editoriales
+
+    > http://localhost:8080/getAllEditoriales
+    
+    4. /getAllLibros: Obtener los libros
+
+    > http://localhost:8080/getAllLibros
 
 
